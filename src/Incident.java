@@ -1,13 +1,23 @@
 
+/**
+ *
+ * This is an abstract representation of an Incident. Constructor defines the value,
+ * postcode, month and year of given incident.
+ * district.
+ *
+ * @author Raminta Misiunaite
+ *
+ */
+
 public class Incident {
 
     private double value;
     private String postcode;
-    private int month;
+    private String month;
     private int year;
 
 
-    public Incident(double value, String postcode, int month, int year) {
+    public Incident(double value, String postcode, String month, int year) {
         this.value = value;
         this.postcode = postcode;
         this.month = month;
@@ -30,11 +40,11 @@ public class Incident {
         this.postcode = postcode;
     }
 
-    public int getMonth() {
+    public String getMonth() {
         return month;
     }
 
-    public void setMonth(int month) {
+    public void setMonth(String month) {
         this.month = month;
     }
 
@@ -55,5 +65,4 @@ public class Incident {
                 ", year=" + this.getYear() +
                 '}';
     }
-
 }

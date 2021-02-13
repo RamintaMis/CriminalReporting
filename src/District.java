@@ -1,16 +1,28 @@
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-
-
+import  java.lang.Double;
+/**
+ *
+ * This is an abstract representation of a District with composition of Incidents
+ * stored in an arraylist. Constructor defines the new arraylist and a name for the
+ * district.
+ *
+ * @author Raminta Misiunaite
+ *
+ */
 public class District {
 
      private String districtName;
-     ArrayList<Incident> incidentList = new ArrayList<>();
+     ArrayList<Incident> incidentList;
 
     public District(String districtName) {
         this.districtName = districtName;
+        incidentList = new ArrayList<>();
+
+    }
+
+    public District(String districtName, ArrayList<Incident> incidentList) {
+        this.districtName = districtName;
+        this.incidentList = incidentList;
     }
 
     public String getDistrictName() {
@@ -32,13 +44,12 @@ public class District {
     public void addIncidentToAList(Incident temp){
         incidentList.add(temp);
     }
-    public void getIncidentList(){
-        for ( Incident i: incidentList) {
-            System.out.println(i);
-        }
-    }
 
-    //The incident with the highest value recorded in the district.
+
+    /**
+     * This method finds the Incident with a highest value in the district.
+     * @return the Incident with a highest value.
+     */
     public Incident highestValueIncident(){
         double max = 0;
         int index = 0;
@@ -51,7 +62,12 @@ public class District {
         return incidentList.get(index);
     }
 
-    //The average incident value recorded in the district in a given year
+    /**
+     * This method finds the average incident value recorded in the district
+     * in a given year.
+     * @param year is the year a user inputs.
+     * @return the average double value; If average is not a number (does not exist) returns 0
+     */
     public double averageIncidentValue(int year ){
         double average;
         double sum = 0;
@@ -63,10 +79,19 @@ public class District {
             }
         }
         average = sum/amount;
-        return average;
+        if (Double.isNaN(average)){
+            return 0;
+        }else {
+            return average;
+        }
     }
-    //A list of all incidents recorded in the district with a value greater than a given amount
-    //of money.
+
+    /**
+     * This method creates a list of all incidents recorded in the district with a value
+     * greater than a given amount of money.
+     * @param value is double value user inputs that incidents have tobe greater than.
+     * @return an arraylist of incidents which meet the condition
+     */
     public ArrayList<Incident> incidentsWithGreaterValue(double value){
         ArrayList<Incident> temp = new ArrayList<>();
         for ( Incident i: incidentList) {
@@ -76,6 +101,4 @@ public class District {
         }
         return temp;
     }
-
-
 }
