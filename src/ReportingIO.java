@@ -39,47 +39,6 @@ public class ReportingIO {
         rio.r.addDistrict(d3);
         rio.r.putAllIncidentsToList();
 
-//        System.out.println("district 1: ");
-//        d.getIncidentList();
-//        System.out.println("district2");
-//        d1.getIncidentList();
-//        System.out.println("district 3: ");
-//        d2.getIncidentList();
-//        System.out.println("district4");
-//        d3.getIncidentList();
-
-
-//        System.out.println("District list");
-//          rio.r.printDistrictList();
-//        System.out.println("the highest value in district 1: ");
-//        System.out.println(d.highestValueIncident());
-//
-//        System.out.println("the highest value in district 4: ");
-//        System.out.println(d3.highestValueIncident());
-
-//
-//        System.out.println("the average incident value in dist1 in 2020:");
-//        System.out.println(d.averageIncidentValue(2020));
-//        System.out.println("the average incident value in dist2 in 2015:");
-//        System.out.println(d2.averageIncidentValue(2015));
-
-//
-//        System.out.println("incidents with greater value then from dis1");
-//        System.out.println(d.incidentsWithGreaterValue(10));
-//        System.out.println("incidents with greater value then from dis2");
-//        System.out.println(d1.incidentsWithGreaterValue(100));
-
-//        System.out.println("The district with the largest average value incident");
-//        System.out.println(rio.r.largestAvgValue(2020));
-
-
-//        rio.r.printAllIncidents();
-//        System.out.println("largest value ever: ");
-//        System.out.println(rio.r.largestValueIncident());
-//        System.out.println("all incidents worth more than");
-//        System.out.println(rio.r.incidentsGreaterThanValue(50));
-
-
         System.out.println("Please choose an action: \n" +
                 "1: Enter District data\n" + "2: Enter Incident data\n"
                 + "3: Provide reporting statistics on: \n  - district with largest average value incident for a " +

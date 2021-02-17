@@ -71,7 +71,6 @@ public class Reporting {
         }
         return allIncidents.get(index);
     }
-    // A list of all incidents recorded with value greater than a given amount of money.
 
     /**
      * This method creates an arraylist of all incidents recorded with value greater
