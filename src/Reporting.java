@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This is class stores arraylists of all Districts and all Incidents.
@@ -6,8 +7,8 @@ import java.util.ArrayList;
  */
 public class Reporting {
 
-    ArrayList<District> districtList = new ArrayList<>();
-    ArrayList<Incident> allIncidents = new ArrayList<>();
+    List<District> districtList = new ArrayList<>();
+    List<Incident> allIncidents = new ArrayList<>();
 
     public void addDistrict(District temp){
         districtList.add(temp);
@@ -42,7 +43,7 @@ public class Reporting {
         }
     }
 
-    public ArrayList<Incident> putAllIncidentsToList(){
+    public List<Incident> putAllIncidentsToList(){
         for (District d: districtList){
             for (Incident i: d.incidentList){
                 allIncidents.add(i);
@@ -78,8 +79,8 @@ public class Reporting {
      * @param value user's input of double value that incidents have to be greater than.
      * @return an arraylist of Incidents
      */
-    public ArrayList<Incident> incidentsGreaterThanValue(double value){
-        ArrayList<Incident> temp = new ArrayList<>();
+    public List<Incident> incidentsGreaterThanValue(double value){
+        List<Incident> temp = new ArrayList<>();
         for ( Incident i: allIncidents) {
             if (i.getValue() > value && !temp.contains(i)) {
                 temp.add(i);

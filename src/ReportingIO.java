@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/**
+ * This is a special class mainly used for storing the console menu and some hardcoded ocjects.
+ */
 
 public class ReportingIO {
 
@@ -69,7 +72,7 @@ public class ReportingIO {
                     switch (enter){
                         case 1:
                             Scanner s1 = new Scanner(System.in);
-                            System.out.println("Enter name");
+                            System.out.println("Enter name:");
                             String name =  s1.nextLine();
                             District newD = new District(name);
                             rio.r.addDistrict(newD);
@@ -83,7 +86,6 @@ public class ReportingIO {
                             System.out.println("How many Incidents you want to add?");
                             int num = s2.nextInt();
                             for (int j = 0; j<num; j++){
-                                //Scanner s3 = new Scanner(System.in);
                                 System.out.println("Enter incident data:");
                                 System.out.println("Enter value: ");
                                 double value = s2.nextDouble();
@@ -99,6 +101,8 @@ public class ReportingIO {
                             }
                             break;
                     }
+                    rio.r.printDistrictList();
+                    System.out.println("Completed");
                     break;
 
                 case 2:
@@ -116,6 +120,8 @@ public class ReportingIO {
                     int y = s.nextInt();
                     Incident newInc = new Incident(value, post, m, y);
                     rio.r.allIncidents.add(newInc);
+                    rio.r.printAllIncidents();
+                    System.out.println("Completed");
                     break;
 
                 case 3:
@@ -128,6 +134,7 @@ public class ReportingIO {
                     System.out.println("3) Please enter the value that listed incidents have to be greater than");
                     double choice2 = s.nextDouble();
                     System.out.println(rio.r.incidentsGreaterThanValue(choice2));
+                    System.out.println("Completed");
                     break;
 
                 case 4:

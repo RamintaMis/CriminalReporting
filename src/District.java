@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import  java.lang.Double;
 /**
  *
@@ -12,7 +13,7 @@ import  java.lang.Double;
 public class District {
 
      private String districtName;
-     ArrayList<Incident> incidentList;
+     List<Incident> incidentList;
 
     public District(String districtName) {
         this.districtName = districtName;
@@ -32,6 +33,7 @@ public class District {
     public void setDistrictName(String districtName) {
         this.districtName = districtName;
     }
+
 
     @Override
     public String toString() {
@@ -92,8 +94,8 @@ public class District {
      * @param value is double value user inputs that incidents have tobe greater than.
      * @return an arraylist of incidents which meet the condition
      */
-    public ArrayList<Incident> incidentsWithGreaterValue(double value){
-        ArrayList<Incident> temp = new ArrayList<>();
+    public List<Incident> incidentsWithGreaterValue(double value){
+        List<Incident> temp = new ArrayList<>();
         for ( Incident i: incidentList) {
             if (i.getValue() > value) {
                 temp.add(i);

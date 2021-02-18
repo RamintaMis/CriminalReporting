@@ -1,3 +1,4 @@
+import java.util.Calendar;
 
 /**
  *
@@ -21,6 +22,7 @@ public class Incident {
         this.value = value;
         this.postcode = postcode;
         this.month = month;
+        checkYear(year);
         this.year = year;
     }
 
@@ -54,6 +56,12 @@ public class Incident {
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    public void checkYear(int year){
+        if (year<0 || year>Calendar.getInstance().get(Calendar.YEAR)){
+            throw new IllegalArgumentException("That is not a valid year");
+        }
     }
 
     @Override
