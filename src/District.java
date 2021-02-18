@@ -21,7 +21,7 @@ public class District {
 
     }
 
-    public District(String districtName, ArrayList<Incident> incidentList) {
+    public District(String districtName, List<Incident> incidentList) {
         this.districtName = districtName;
         this.incidentList = incidentList;
     }
