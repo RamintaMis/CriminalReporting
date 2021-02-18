@@ -4,6 +4,8 @@ import java.util.List;
 /**
  * This is class stores arraylists of all Districts and all Incidents.
  * Mainly is used for storing methods that are used in ReportingIO class.
+ *
+ * @author Raminta Misiunaite
  */
 public class Reporting {
 

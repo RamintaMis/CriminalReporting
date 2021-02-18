@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 /**
  * This is a special class mainly used for storing the console menu and some hardcoded ocjects.
+ *
+ * @author Raminta Misiunaite
  */
 
 public class ReportingIO {
@@ -20,7 +22,7 @@ public class ReportingIO {
         Incident i1 = new Incident(45.7,"SW1W", "Feb", 2012);
         Incident i2 = new Incident(5, "NE265", "April", 2020);
         Incident i3 = new Incident(8000, "PO16", "May", 2015);
-        Incident i4 = new Incident(687, "PO1", "October", 2020);
+        Incident i4 = new Incident(687.9, "PO1", "October", 2020);
         Incident i5 = new Incident(278, "GU16", "January", 2008);
         Incident i6 = new Incident(90, "NE16", "December", 2018);
 
